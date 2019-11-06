@@ -5,6 +5,7 @@
 *, *::before, *::after{
   box-sizing: border-box;
 }
+/*숨김 콘텐츠*/
 .a11y-hidden{
   background: yellow;
   position: absolute;
@@ -53,12 +54,13 @@ body{
 
 /*로고*/
 .logo a{
- background: blue;
+ background: green;
  margin-top: 0;
  margin-bottom: 0;
  position: absolute;
- left:60px;
- top:50px;
+top: 47px;
+left: 65px;
+
 }
 /*멤버 링크*/
 .member{
@@ -238,17 +240,111 @@ color: rgba(0,0,0,1);
   min-height: 250px;
 }
 .group1{
-  background: teal;
+  
   width: 150px;
 }
 .group2{
-  background: tomato;
+  
   width: 280px;
 }
 .group3{
-  background: yellowgreen;
+  
   width: 90px;
 }
+/*로그인*/
+.login{
+  background: radial-gradient(circle at right top rgb(194, 95, 15),  rgb(226, 59, 12));
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 0 #aaaa;
+  padding:10px;
+}
+.login-heading{
+  color:#ff0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 0 10px;
+}
+.login-form{
+background: #fff;
+border-radius: : 5px 5px 0 0;
+padding: 10px 10px 0 10px ;
+}
+.login-form fieldset{
+position: relative;
+ padding :0;
+border:none;
+margin:0;
+background: yellow;
+border-bottom: 1px solid #aaa;
+padding-bottom: 1px;
+}
+.user-email, .user-pw{
+  background: skyblue;
+  margin-bottom: 5px;
+}
+[for="userId"],[for="userPwd"]{
+  background: pink;
+  width:4em;
+  display: inline-block;
+
+}
+[name="userId"], [name="userPwd"]{
+background: pink;
+width:200px;
+height:24px;
+}
+
+.btn-login{
+  position: absolute;
+  top :0;
+  right: 0;
+  width: 55px;
+  height: 55px;
+  border: 0;
+  border-radius: 3px;
+  color:#000;
+}
+.sign{
+background: #fff;
+padding :10px 10px 10px 5px;
+border-radius: 0 0 5px 5px;
+list-style: none;
+margin:0;
+display: flex;
+justify-content: space-between;
+}
+.sign a::before{
+ color: rgba(212,92,24); 
+}
+/*유효성 검사 배너*/
+.validation-list{
+  margin: 23px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left:0;
+  list-style: none;
+ 
+}
+.validation-list a{
+ display: block;
+ border: 1px solid #aaa;
+ border-radius: 30px;
+ line-height: 30px;
+ height: 30px;
+ margin: 10px 0;
+ padding-left:45px;
+ background: url("./images/validation_icon.png") no-repeat 20px 50%
+ linear-gradient(#ccc, #eee);
+
+  /* display: blue;
+  background: rgb(125, 130, 133);
+  right: 50px;*/
+
+}
+/*웹관련 용어*/
+/*슬로건*/
+
+
 /* 슬로건 */
 .slogan{
   background: lime;
