@@ -19,6 +19,7 @@ a{
   color: : inherit;
   text-decoration: none;
   outline: none;
+  
 }
 a:focus{
   box-shadow: 0 0 2 1px red;
@@ -35,7 +36,8 @@ body{
 }
 /* 컨테이너 */
 .container{
-  background: silver;
+  background: url("./images/bg_flower.png") no-repeat 50% 0,
+  #aaa linear-gradient(#ccc, #eee 35% #fff 65%,#fff 100%);
 }
 .header, .visual, .main, .slogan, .footer{
   width: 640px;
@@ -63,22 +65,21 @@ body{
   margin: 0 23px 0 30px;
   padding-left:0;
   list-style-type: none;
-  background: pink;
+  background: mintcream;
   text-align: right;  
   font-size: 0 rem;
 }
 .member li, .member a{
   display: inline-block;
-  background: lime;
+  background: #fff;
 }
 .member li{
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 1px;
+  padding-bottom: 1px;
   font-size: 0 rem;
 }
 .member a{
   padding: 0.5em;
-
   text-transform: uppercase;
 }
 /*메인메뉴*/
@@ -124,7 +125,7 @@ background: linear-gradient(180deg, rgba(36,13,0,1) 0%, rgba(121,35,9,1) 35%, rg
 
 }
 .menu-act .btn-menu::after{
- contant :"";
+ content :"";
  background: pink;
  display: block;
  border-top :2px solid #000;
@@ -162,10 +163,63 @@ padding:0.5em 0.5em 0.5em 0;
 }
 
  /* 비주얼 */
+ /*비주얼 애니메이션*/
+ @keyframes textAni{
+   0%{
+font-size:12px;
+color: rgba(0,0,0,0);
+ transform: translate(0, 0);
+   }
+   100%{
+font-size:24px;
+color: rgba(0,0,0,1);
+ transform: translate(400px, 75px);
+   }
+ }
+ @keyframes bgAni{
+   0%{opacity: 1;}
+   100{opacity: 0;}
+ }
 .visual{
- /* background: orange;*/
-  height: 5vh;
+  height: 120px;
+  position: relative;
+
 }
+.visual::before, .visual::after{
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  animation-name: bgAni;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.visual::before{
+  background: url("./images/ani_flower_01.png") no-repeat 0 -10px,
+   url("./images/ani_flower_02.png") no-repeat 670px 0;
+}
+.visual::after{
+  animation-delay: 50000ms;
+  background: url("./images/ani_flower_03.png") no-repeat 300 0,
+   url("./images/ani_flower_04.png") no-repeat 800px 0;
+}
+.visual::after{
+/*background: hsla(200, 50%, 50%, );*/
+}
+.visual-text{
+  width: 500px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+ /* background: #ff0;*/
+  margin: : 0;
+  animation-name : textAni;
+  animation-duration: 5000ms;
+  animation-fill-mode: forwards;
+
+}
+
 
 /* 메인 콘텐츠 */
 .main{
@@ -179,9 +233,9 @@ padding:0.5em 0.5em 0.5em 0;
 }
 .group{
   float: left;
-  margin-left: 15px;
-  margin-right: 15px;
-  min-height: 200px;
+  margin-left: 10px;
+  margin-right: 0.5px;
+  min-height: 250px;
 }
 .group1{
   background: teal;
@@ -202,7 +256,7 @@ padding:0.5em 0.5em 0.5em 0;
 }
 /* 푸터 */
 .footer-bg{
-  background: purple;
+  background:  #aaa linear-gradient(#ccc, #eee 35% #fff 65%,#fff 100%);
 }
 .footer{
   background: pink;
