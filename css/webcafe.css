@@ -22,7 +22,7 @@ a{
   
 }
 a:focus{
-  box-shadow: 0 0 2 1px red;
+  box-shadow: 0 0 5px 1px #296897;
 }
 /*이미지기본설정*/
 img{
@@ -36,23 +36,25 @@ body{
   color: #181818;
   font-size: 1.4rem;
   font-family: 'Spoqa Han Sans', 'Sans-serif';
-  font-weight: 200;
+  font-weight: 300;
 }
 /* 컨테이너 */
 .container{
   background: url("./images/bg_flower.png") no-repeat 50% 0,
-  #aaa linear-gradient(#ccc, #eee 35% #fff 65%,#fff 100%);
+#aaa linear-gradient(#ccc, #eee 45% #fff 70%,#fff 100%) ;
+ background-color:#ccc ;
 }
 .header, .visual, .main, .slogan, .footer{
-  width: 640px;
+  width: 940px;
   margin: 0 auto;
 }
 /* 헤더 */
 .header{
   background: #fff;
   position: relative;
-  border-radius: 10px;
-  padding-bottom: 5px;
+  padding: 0 0 15px 15px;
+  border-radius: 5px;
+  /*padding-bottom: 5px;*/
  }
 
 /*로고*/
@@ -63,6 +65,8 @@ body{
  position: absolute;
 top: 47px;
 left: 65px;
+margin-top: 0;
+margin-bottom: 0;
 
 }
 /*멤버 링크*/
@@ -70,18 +74,16 @@ left: 65px;
   margin: 0 23px 0 30px;
   padding-left:0;
   list-style-type: none;
-  background: mintcream;
   text-align: right;  
-  font-size: 0 rem;
+  font-size: 0 ;
 }
 .member li, .member a{
   display: inline-block;
-  background: #fff;
 }
 .member li{
-  padding-top: 1px;
-  padding-bottom: 1px;
-  font-size: 0 rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 1.4rem;
 }
 .member a{
   padding: 0.5em;
@@ -89,31 +91,29 @@ left: 65px;
 }
 /*메인메뉴*/
 .navagation{
-  background: yellow;
   padding-left: 32px;
 }
 .menu{
-height:50px;
+height:49px;
   margin: 0 30px;
-  padding-left: 225px;
+  padding-left: 230px;
   list-style: none;
   border-top: 2px solid #000;
   border-radius:0 0  5px 5px ;
- background: rgb(36,13,0);
-background: linear-gradient(180deg, rgba(36,13,0,1) 0%, rgba(121,35,9,1) 35%, rgba(121,35,9,1) 70%, rgba(36,13,0,1) 100%);
+ background: rgb(212,92,24);
+background: linear-gradient(180deg, rgba(212,92,24) 0%, rgba(121,35,9,1) 35%, rgba(121,35,9,1) 70%, rgba(36,13,0,1) 100%);
 
 }
 .menu-item{
   position: relative;
   float: left;
- /* border-left:2px solid rgba(255,255,255,0);*/
+  border-left:2px solid rgba(255,255,255,0);
 }
 
 
 .btn-menu{
-  background: blue;
-  /*display:block;*/
-  padding:1em;
+   /*display:block;*/
+  padding:1em 4.5em;
   color:#ffff;
   font-weight: 700;
   font-size:1.5rem;
@@ -127,7 +127,7 @@ background: linear-gradient(180deg, rgba(36,13,0,1) 0%, rgba(121,35,9,1) 35%, rg
   color:#ff0
   }
 .btn-menu:focus{
-  box-shadow: none;
+  box-shadow: initial;
 }
 .menu-act .btn-menu::after{
  content :"";
@@ -139,7 +139,6 @@ background: linear-gradient(180deg, rgba(36,13,0,1) 0%, rgba(121,35,9,1) 35%, rg
 }
 .sub-menu{
   display: none;
-  background: skyblue;
   position: absolute;
   padding-left: 0;
   list-style: none ;
@@ -150,7 +149,7 @@ background: linear-gradient(180deg, rgba(36,13,0,1) 0%, rgba(121,35,9,1) 35%, rg
   left:0;
   }
 .sub-menu4, .sub-menu5, .sub-menu6{
-  left:0; 
+  right: 0; 
 }
 .menu-act .sub-menu{
   display: block ;
@@ -207,7 +206,7 @@ color: rgba(0,0,0,1);
    url("./images/ani_flower_02.png") no-repeat 670px 0;
 }
 .visual::after{
-  animation-delay: 50000ms;
+  animation-delay: 500ms;
   background: url("./images/ani_flower_03.png") no-repeat 300 0,
    url("./images/ani_flower_04.png") no-repeat 800px 0;
 }
@@ -238,8 +237,8 @@ color: rgba(0,0,0,1);
 .group{
   float: left;
   margin-left: 10px;
-  margin-right: 0.5px;
-  min-height: 350px;
+  margin-right: 15px;
+  min-height: 200px;
 }
 .group1{
   
@@ -251,7 +250,7 @@ color: rgba(0,0,0,1);
 }
 .group3{
   
-  width: 90px;
+  width: 190px;
 }
 /*로그인*/
 .login{
@@ -562,6 +561,82 @@ margin: 10px 0 0 0;
 
 }
 */
+/**/
+.gradient-box{
+border: 1px solid #aaa;
+border-radius: 5px;
+
+  background: #ccc;
+
+width: 300px;
+height: 300px;
+}
+/*신규이벤트및 관련사이트*/
+.event-heading, .related-heading{
+font-size:1.6rem;
+font-weight: 800;
+margin-top:0;
+margin-bottom: 10px;
+}
+.event{
+  border-bottom: 10px;
+  padding :relative;
+ }
+.even p{
+  line-height: 1.5;
+}
+.event-img{
+  border:1px solid #ccc;
+  box-shadow: 5px 5px 0 0 #aaa;
+ }
+ .event em{
+   font-style: normal;
+ }
+ .btn-event{
+    position: absolute;
+   
+ }
+ .btn-event-prev, .btn-event-next{
+  vertical-align: top;
+  background: #999 url("./images/back_forward.png");
+  width: 19px;
+  height: 18px; 
+  display: inline-block;
+  overflow: hidden;
+
+}
+.btn-event-next{
+  background-position: -36px 0;
+}
+.related{
+margin-top: 10px;
+ }
+.related-list{
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  background: #fff;
+  height: 27px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  overflow: hidden;
+  transition-property: padding, height ;
+  transition-duration: 200ms, 400ms;
+  transition-delay: 0ms, 200ms;
+   }
+  .related-list li{
+    padding:2px;
+  }
+  .related-list a{
+    line-height: 21px;
+    display: block;
+   padding-left:2em;
+  }
+.related-list:hover{
+  height:147px ;
+  padding: 10px 0;
+ }
+/*인기 사이트*/
 /* 슬로건 */
 .slogan{
   background: lime;
