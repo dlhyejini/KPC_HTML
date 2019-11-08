@@ -254,7 +254,7 @@ color: rgba(0,0,0,1);
 }
 /*로그인*/
 .login{
-  background: radial-gradient(circle at right top rgb(194, 95, 15),  rgb(226, 59, 12));
+  background: radial-gradient(circle at right top, rgb(202, 102, 43),  rgb(196, 53, 14, 1));
   border-radius: 5px;
   box-shadow: 5px 5px 0 0 #aaaa;
   padding:10px;
@@ -262,8 +262,8 @@ color: rgba(0,0,0,1);
 .login-heading{
   color:#ff0;
   font-size: 1.5rem;
-  font-weight: 500;
-  margin: 0 0 0 10px;
+  font-weight: 700;
+  margin: 0 0 10px 10px;
 }
 .login-form{
 background: #fff;
@@ -277,33 +277,34 @@ border:none;
 margin:0;
 background: yellow;
 border-bottom: 1px solid #aaa;
-padding-bottom: 1px;
+padding-bottom: 5px;
 }
 .user-email, .user-pw{
-  background: skyblue;
   margin-bottom: 5px;
 }
-[for="userId"],[for="userPwd"]{
-  background: pink;
+[for="userEmail"],[for="userPwd"]{
   width:4em;
   display: inline-block;
 
 }
 [name="userId"], [name="userPwd"]{
-background: pink;
-width:200px;
+width:90px;
 height:24px;
+border:1px solid #aaa;
+padding: 0 0.5em
 }
 
 .btn-login{
   position: absolute;
   top :0;
   right: 0;
-  width: 45px;
+  width: 55px;
   height: 55px;
   border: 0;
   border-radius: 3px;
-  color:#000;
+  color:#fff;
+  padding:0;
+  background: rgb(212,92,24);
 }
 .sign{
 background: #fff;
@@ -319,7 +320,7 @@ justify-content: space-between;
 }
 /*유효성 검사 배너*/
 .validation-list{
-  margin: 10px;
+  margin: 25px;
   margin-top: 0;
   margin-bottom: 0;
   padding-left:0;
@@ -333,7 +334,7 @@ justify-content: space-between;
  line-height: 30px;
  height: 30px;
  margin: 10px 0;
- padding-left:5px 5px 5px 35px;
+ padding-left: 45px;
  background: url("./images/validation_icon.png") no-repeat 20px 50%
  linear-gradient(#ccc, #eee);
 
@@ -367,17 +368,16 @@ overflow:hidden;
 .term-list dd{
   margin-left: 0;
   }
-.term-heading-subject, .term-list-blief{
+.term-list-subject, .term-list-blief{
   float: right;
   width: 145px;
 }
-.term-heading-subject{
+.term-list-subject{
   columns: #296897;
   margin-top: -2px;
   font-weight: 400;
 }
 .term-list-thumnial{
-  background: lime;
  float: left;
 }
 .term-list-blief{
@@ -397,8 +397,6 @@ line-height: 1.5;
   border :0;
   margin:0;
   padding:0;
-  background: yellow;
-  
 }
 .search-wrapper *{
    display: flex;
@@ -416,11 +414,9 @@ line-height: 1.5;
   padding: 0 0.5em;
 }
 .btn-search{
-  border: 1px solid #aaa;
   color : #fff;
   background: #222;
-  height:24px;
-  font-size:20px;
+  font-size:1.2rem;
   padding: 0 0.85em;
 }
 
@@ -486,7 +482,10 @@ line-height: 1.5;
   right: -0.5em;
   padding: 0.5em;
 }
-.notice-more::before, .pds-more::before, .news-more::before{
+.notice-more::before, 
+.pds-more::before, 
+.news-more::before, 
+.favorite::before{
   color: hsl(110, 50%, 30%);
 }
 
@@ -498,7 +497,7 @@ line-height: 1.5;
 .news::before{
   content:"";
   position: absolute;
-  top: 40px;
+  top: 35px;
   left: 0;
   width: 80%;
   height: 1px;
@@ -512,7 +511,7 @@ line-height: 1.5;
   }
 
 .news-item{
-  padding-left:145px;
+  padding-left:130px;
   }
 .news-item-heading{
   margin:0 0 5px 0;
@@ -565,14 +564,13 @@ margin: 10px 0 0 0;
 .gradient-box{
 border: 1px solid #aaa;
 border-radius: 5px;
-
-  background: #ccc;
+background: #ccc;
 
 width: 300px;
 height: 300px;
 }
 /*신규이벤트및 관련사이트*/
-.event-heading, .related-heading{
+.event-heading, .related-heading, .favorite-heading {
 font-size:1.6rem;
 font-weight: 800;
 margin-top:0;
@@ -637,6 +635,40 @@ margin-top: 10px;
   padding: 10px 0;
  }
 /*인기 사이트*/
+.favorite{
+  margin-top: 20px ;
+}
+.favorite-list{
+  margin:0;
+  padding-left:0;
+  list-style-type: none;
+  counter-reset:number;
+  }
+  .favorite-list li{
+    counter-increment: number;
+    margin-top: 0 ;
+  }
+.favorite-list li::before{
+  content: counter(number);
+  background: #999;
+  color: #fff;
+  padding: 0 0.5em;
+  border-radius: 3px;
+  margin-right: 5px; 
+font-size: 1.2rem;
+}
+.up, .down, stop{
+  margin-left:auto ;
+
+  display: inline-block;
+  background: url("./images/rank.png");
+
+} 
+.favorite-more{
+
+}
+
+
 /* 슬로건 */
 .slogan{
   background: lime;
